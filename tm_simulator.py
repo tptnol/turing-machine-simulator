@@ -195,6 +195,7 @@ def run_transducer(tm_definition, tm_input):
                     break
                 output += symbol
 
+        # add that john to the output
         result.append(output)
 
     return result
