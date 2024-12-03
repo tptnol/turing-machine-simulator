@@ -139,6 +139,7 @@ def run_transducer(tm_definition, tm_input):
         # current state is the defined initial state
         current_state = initial_state
 
+
         while True:
 
             # ensure symbol within bounds of the tape
@@ -178,16 +179,22 @@ def run_transducer(tm_definition, tm_input):
             elif direction == 'L':
                 head_position -= 1
 
+            # when it reaches an accepting state, you are done
             if current_state in final_states:
                 break
 
-
-        # Ensure head_position is within bounds
+        
+        # transducer conventions
+        output = ''
+        # ensure that the head_position is less than the length
         if head_position < len(tape):
-            output = ''.join(tape[head_position:])
-        else:
-            output = ''
-            
+            # from head_position onwards
+            for symbol in tape[head_position:]:
+                # add the symbol until you reach a _, then stop adding symbols
+                if symbol == '_':
+                    break
+                output += symbol
+
         result.append(output)
 
     return result
