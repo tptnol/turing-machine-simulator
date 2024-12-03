@@ -1,0 +1,29 @@
+TM
+qi, q0, qw0,  q1, qw1, qr, qt, qu, qf
+0,1
+0,1,_,x
+qi
+_
+qf
+(qi,0, q0,x, L)
+(qi,1, q1,x, L)
+(qi,x,qi,x,R)
+(qi,_,qt,_,L)
+(q0,x,q0,x,L)
+(q0,_,qw0,_,L)
+(q1,x,q1,x,L)
+(q1,_,qw1,_,L)
+(qw0,0,qw0,0,L)
+(qw0,1,qw0,1,L)
+(qw0,_,qr,0,R)
+(qw1,0,qw1,0,L)
+(qw1,1,qw1,1,L)
+(qw1,_,qr,1,R)
+(qr,0,qr,0,R)
+(qr,1,qr,1,R)
+(qr,_,qi,_,R)
+(qt,x,qt,x,L)
+(qt,_,qu,_,L)
+(qu,0,qu,0,L)
+(qu,1,qu,1,L)
+(qu,_,qf,_,R)
