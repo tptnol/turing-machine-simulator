@@ -1,3 +1,8 @@
+# @author: Harvey Villanueva
+# @github: tptnol
+# CSCE355 Turing Machine Simulation Assignment
+
+
 import sys
 
 
@@ -138,7 +143,6 @@ def run_transducer(tm_definition, tm_input):
 
         # current state is the defined initial state
         current_state = initial_state
-
 
         while True:
 
